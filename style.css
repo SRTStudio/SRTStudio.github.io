@@ -1,21 +1,98 @@
 body {
     width: 100%;
     height: 100vh;
+    overflow: hidden;
     background-image: linear-gradient();
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(to bottom, #cef, #ddf);
+    background-color: #050505;
+    background-image: 
+        radial-gradient(circle at bottom right, #acf2, transparent 50%),
+        radial-gradient(farthest-side at top left, #afa2, transparent 50%);
+    color: white;
+    font-family: Noto Sans, sans-serif;
     margin: 0;
+}
+
+@media (min-width: 700px) {
+    h1 {
+        font-size: 6rem;
+    }
+
+    #menu-opener {
+        position: absolute;
+        top: -1000px;
+    }
+}
+
+@media (max-width: 700px) and (min-width: 350px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    #links {
+        position: absolute;
+        top: -1000px;
+    }
+}
+
+@media (max-width: 350px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    #links {
+        position: absolute;
+        top: -1000px;
+    }
 }
 
 h1 {
     position: relative;
     font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
     bottom: 20px;
-    font-size: 6rem;
     font-weight: 900;
+    color: #0000;
+    background-image: linear-gradient(to right, #fff, #777);
+    background-clip: text;
+}
+
+#menu-opener {
+    font-size: 3rem;
     color: #333;
+    margin-right: 30px;
+}
+
+#menu {
+    position: absolute;
+    width: 150px;
+    height: 100%;
+    transition: all 0.5s;
+    background-color: #222;
+    z-index: 500;
+    padding-left: 20px;
+    padding-top: 20px;
+    box-sizing: border-box;
+    box-shadow: 2px 0 10px 3px #0003;
+}
+
+#menu > h3 {
+    color: #ddd
+}
+
+#menu-logo {
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 20px;
+}
+
+.hidden {
+    left: -210px; 
+}
+
+.shown {
+    left: 0px;
 }
 
 #navbar {
@@ -28,12 +105,9 @@ h1 {
 }
 
 #links {
-    font-family:
-        Noto Sans,
-        sans-serif;
     margin-right: 30px;
     font-size: 1.2rem;
-    color: #555;
+    color: #aaa;
     font-weight: 600;
     width: 350px;
     display: flex;
@@ -44,5 +118,5 @@ h1 {
 #logo {
     width: 4rem;
     height: 4rem;
-    margin-left: 50px;
+    margin-left: 30px;
 }
